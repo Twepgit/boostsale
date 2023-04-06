@@ -23,17 +23,19 @@ const options = {
     }
 };
 
-const data = await axios.request(options);
-const f = data.data.data;
-const z = [];
+(async () => {
+    const data = await axios.request(options);
+    const f = data.data.data;
+    const z = [];
 
-for(let i =0; i< f.length;i++) {
-    z.push({
-        address : f[i].address,
-        symbol : f[i].token
+    for(let i =0; i< f.length;i++) {
+        z.push({
+            address : f[i].address,
+            symbol : f[i].token
+        })
+    }
+    fs.writeFile('./trending.json', JSON.stringify(z), function(){
+
+        totalPinksalePool = []
     })
-}
-fs.writeFile('./trending.json', JSON.stringify(z), function(){
-
-    totalPinksalePool = []
-})
+})();
