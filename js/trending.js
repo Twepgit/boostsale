@@ -35,7 +35,7 @@ const options = {
             symbol : f[i].token
         })
     }
-    fs.writeFile('./trending.json', JSON.stringify(z), function(){
+    fs.writeFile('./json/trending.json', JSON.stringify(z), function(){
 
         totalPinksalePool = []
     })

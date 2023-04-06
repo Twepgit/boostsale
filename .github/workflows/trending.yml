@@ -31,6 +31,6 @@ jobs:
         
         git config --global user.name 'twepgithub'
         git config --global user.email 'twepgithub@gmail.com'
-        git add jsons/trending.json
+        git add json/trending.json
         git commit -am "trending"
         git push
